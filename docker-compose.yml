@@ -1,0 +1,29 @@
+services:
+  php-apache:
+    build: . 
+    ports: 
+      - "8000:80"
+    volumes: 
+      - ./:/var/www/html
+    depends_on:
+      - mysql 
+    networks:
+      - app-network 
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: gestock_bdd
+      MYSQL_USER: gestock_user
+      MYSQL_PASSWORD: N7!qV4@xT9#pL2zK
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  mysql-data:
+networks:
+  app-network:
