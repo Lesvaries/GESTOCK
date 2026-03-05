@@ -1,3 +1,7 @@
+# Desktop-Client Application C#
 .vs/
 bin/
 obj/
+*.user
+*.suo
+*.log
