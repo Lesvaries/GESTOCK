@@ -1,0 +1,8 @@
+# services-web/.htaccess
+RewriteEngine On
+# Si on demande la racine, on envoie discrètement vers public/
+RewriteRule ^$ public/index.php [L]
+# Si on demande un fichier qui n'existe pas, on l'envoie aussi vers public/index.php (le routeur)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]
