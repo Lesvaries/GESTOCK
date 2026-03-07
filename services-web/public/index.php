@@ -31,6 +31,9 @@ switch ($section){
     default : 
         require_once CONTROLLER_PATH . '/homepageController.php';
         break;
-
 }
+$content = ob_get_clean();
+
+require '../app/views/partials/layout.php';
+
 ?>
