@@ -1,8 +1,11 @@
 <?php
+// Definir la racine du projet 
 define('BASE_PATH', dirname(__DIR__));
-define("PUBLIC_PATH", __DIR__ . '/public');
-define("CORE_PATH", __DIR__ . '/app/core');
-define("VIEW_PATH", __DIR__ . '/app/views');
-define("CONTROLLER_PATH", __DIR__ . '/app/controllers');
-define("MODEL_PATH", __DIR__ . "/app/models/")
+
+// Charger les configurations
+define("PUBLIC_PATH", BASE_PATH . '/public');
+define("CORE_PATH", BASE_PATH . '/app/core');
+define("VIEW_PATH", BASE_PATH . '/app/views');
+define("CONTROLLER_PATH", BASE_PATH . '/app/controllers');
+define("MODEL_PATH", BASE_PATH . "/app/models/")
 ?>
