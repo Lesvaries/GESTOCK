@@ -23,6 +23,21 @@ services:
     networks:
       - app-network
 
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: pma_gestock
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql        
+      PMA_PORT: 3306
+      ARBITRARY_SETTINGS: 1     
+    ports:
+      - "8080:80"         
+    networks:
+      - app-network
+
+
 volumes:
   mysql-data:
 networks:
