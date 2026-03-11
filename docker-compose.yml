@@ -33,7 +33,7 @@ services:
       PMA_PORT: 3306
       ARBITRARY_SETTINGS: 1     
     ports:
-      - "8080:80"         
+      - "8080:80" 
     networks:
       - app-network
 
